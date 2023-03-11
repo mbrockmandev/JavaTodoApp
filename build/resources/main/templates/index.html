@@ -1,0 +1,17 @@
+<table xmlns:th="http://www.w3.org/1999/xhtml">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="todo : ${todos}">
+        <td th:text="${todo.name}"></td>
+        <td th:text="${todo.description}"></td>
+        <td th:text="${todo.dueDate}"></td>
+        <td>
+            <button>Edit</button>
+            <button>Delete</button>
+        </td>
+    </tr>
+</table>
